@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #808080; /* Changed background color */
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            width: calc(100% - 22px);
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-container button:hover {
+            background-color: #555;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .content table, .content th, .content td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .content img {
+            max-width: 100px;
+            height: auto;
+        }
+        .content #read-more {
+            text-align: center;
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .content #read-more h2 {
+            margin-bottom: 10px;
+        }
+        .content #read-more h3 {
+            border: 1px solid #000;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        .content #read-more p {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .content button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .content button:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">My Portfolio</div>
+    <nav>
+        <ul>
+            <li><a href="#">First Quarter</a></li>
+            <li><a href="#">Second Quarter</a></li>
+        </ul>
+        <input type="text" placeholder="Search..." id="search-box">
+        <button onclick="search()">Search</button>
+    </nav>
+</header>
+
+<main>
+    <div class="login-container" id="login-container"> <!-- Added an ID for JavaScript access -->
+        <h1>Login</h1>
+        <form onsubmit="return login()">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Log in</button>
+        </form>
+    </div>
+</main>
+
+<div class="welcome-page" id="welcome-page" style="display: none;"> <!-- Set to display: none by default -->
+    <h1>Welcome to My Portfolio</h1>
+    <p>Thank you for logging in! You are now granted access to your portfolio.</p>
+</div>
+
+<div class="content">
+    <h1>Characters of Noli Me Tangere</h1>
+    <table>
+        <tr>
+            <th>Character</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><img src="Crisostomo.jpeg" alt="Juan Crisostomo Ibarra"></td>
+            <td>The protagonist of the book is Juan Crisostomo Ibarra, also known as Ibarra. After finishing his studies in Europe, he returns to the Philippines with high hopes for making a difference in his hometown. However, he encounters many difficulties and injustices, which causes him to change from a youthful idealist to a revolutionary figure.</td>   
+        </tr>
+        <tr>
+            <td><img src="Maria.jpeg" alt="Maria clara"></td>
+            <td>During the Spanish colonial era, Maria Clara is presented as a representation of innocence, purity, and the idealized Filipina lady. Juan Crisostomo Ibarra, the protagonist, is in love with her. She represents the impact of the Spanish friars on Filipino culture because she was raised in a convent. Her persona serves to illustrate the limitations imposed on women by the patriarchal culture of the day. Maria Clara's life is plagued by secrets and tragedy in spite of its outward appearance of perfection, representing the unseen sorrow that existed throughout colonial society.</td>
+        </tr>
+        <tr>
+            <td><img src="Don.jpeg" alt="Don Rafael Ibarra">
+
+
+                <td>Juan Crisostomo Ibarra, the main character of the book, is descended from Don Rafael Ibarra. He is a well-off Filipino who went to school in Europe and returned with cutting-edge ideas. His persona stands in for the country's aspirations for constructive transformation and development. A significant portion of the novel's conflict is set in motion by his awful destiny.</td>
+        </tr>
+    </table>
+
+    <a href="#read-more">Read More</a>
+
+    <div id="read-more">
+        <h2>Additional Information</h2>
+        <h3>Juan Crisostomo Ibarra</h3>
+        <p>The protagonist of the book is Juan Crisostomo Ibarra. He is a rich and intelligent Filipino who has just returned from Europe. Ibarra represents development and optimism in a country still suffering from Spanish colonization since he is motivated by a desire for justice and reform in his own San Diego. His persona reflects the fight for progress and the aspiration of the Filipino people for a brighter future.</p>
+        
+        <h3>Don Rafeal Ibarra</h3>
+        <p>Juan Crisostomo Ibarra's father is Don Rafael Ibarra. He is a well-liked and wealthy guy who is renowned for his generosity and friendliness to the residents of San Diego. The sad end of Don Rafael early in the narrative sets the stage for the subsequent events and emphasizes the injustices and mistreatment of the Filipino populace during the period of Spanish rule.</p>
+        
+        <h3>Maria Clara de los Santos</h3>
+        <p>The protagonist of the story and Juan Crisostomo Ibarra's love interest is Maria Clara de los Santos. She is recognized for her beauty and elegance and is the Captain Tiago's daughter. The character of Maria Clara is essential to the plot's examination of love, identity, and the effects of colonial tyranny since she represents the idealized qualities of modesty and purity in the eyes of society.</p>
+    </div>
+
+    <button onclick="scrollToTop()">Back to Top</button>
+</div>
+
+<div class="content">
+    <h1>Philippines Beauty</h1>
+    <ul>
+        <li>
+            <img src="BanaueRiceTerraces.jpeg" alt="Description of image 1">
+            <div class="image-description">The Banaue Rice Terraces in the Philippines are a historic marvel, carved into the Cordillera Mountains over 2,000 years ago by Ifugao tribes. These terraces, designated as a UNESCO World Heritage site, demonstrate remarkable agricultural engineering. The breathtaking scenery captivates visitors, as they travel through verdant rice paddies and engage with the Ifugao people's rich cultural legacy. The Banaue Rice Terraces are a stunning example of the synergy between human creativity and nature's beauty. They also demonstrate sustainable agricultural techniques.</div>
+        </li>
+        <li>
+            <img src=" MtPulag.jpeg" alt="Description of image 2">
+            <div class="image-description"> Mount Pulag in the Philippines, at 2,926 meters, captivates nature lovers with its sea of clouds and dawn views. Its various habitats, which include mossy woods, make it a popular hiking destination. The Akiki and Ambangeg routes are suitable for hikers of all skill levels. With cool climates and stunning landscapes, it's a must-visit for adventure seekers.</div>
+        </li>
+        <li>
+            <img src="Caramoan Islands.jpeg" alt="Description of image 3">
+            <div class="image-description">Caramoan Islands in the Philippines are a hidden gem famed for its gorgeous beaches and limestone cliffs. The archipelago, which includes several islets, has crystal-clear seas perfect for snorkeling and island hopping. Caramoan is well-known for its participation on the reality program Survivor. It shows pristine beauty and rich marine life. The islands attract beachgoers and adventurers, offering an off-the-beaten-path retreat amid the tropical paradise of the Philippines.</div>
+        </li>
+    </ul>
+
+    <hr>
+
+    <p>Feel free to explore more:</p>
+    <button onclick="location.href='https://filipiknow.net/tourist-spots-in-the-philippines/'">Visit Website for more information</button>
+
+    <hr>
+</div>
+
+<script>
+    function login() {
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("welcome-page").style.display = "block";
+        return false; // Prevent form submission for demonstration purposes
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+</body>
+</html>
